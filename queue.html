@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="Queue.js"></script>
+    <script>
+        var queue = new Queue();
+        queue.enqueue(1);
+        queue.enqueue(2);
+        queue.enqueue(3);
+        queue.enqueue(4);
+        console.log(queue.toString());
+        console.log(queue.dequeue());
+        console.log(queue.toString());
+        console.log(queue.front());
+        console.log(queue.back());
+        console.log(queue.isEmpty());
+        queue.clear();
+        console.log(queue.isEmpty());
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

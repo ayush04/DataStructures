@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="Set.js"></script>
+    <script>
+        var set = new Set();
+
+        set.add(1);
+        set.add(2);
+        console.log(set.display());
+        set.add(2);
+        set.add(3);
+        set.add(4);
+        set.add(1);
+        console.log(set.display());
+        console.log(set.size());
+        console.log(set.remove(6));
+        console.log(set.remove(3));
+        console.log("Set :: " + set.display());
+        
+        var set1 = new Set();
+        set1.add(2);
+        set1.add(3);
+        set1.add(6);
+        set1.add(8);
+        set1.add(4);
+        console.log("Set1 :: " + set1.display());
+        console.log(set.union(set1).display());
+        console.log(set.intersect(set1).display());
+        console.log(set1.subset(set));
+
+        console.log(set.difference(set1).display());
+        console.log(set1.difference(set).display());
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

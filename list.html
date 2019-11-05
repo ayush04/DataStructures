@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>List</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="list.js"></script>
+    <script>
+        var names = new List();
+        names.append("Cynthia");
+        names.append("Raymond");
+        names.append("Barbara");
+        console.log(names.toString());
+        names.remove("Raymond");
+        console.log(names.toString());
+        names.insert("Raymond", 1);
+        names.insertAfter("Jim", "Raymond");
+        console.log(names.toString());
+        console.log(names.contains("Raymond"));
+        console.log(names.contains("Raymond1"));
+
+        /*names.front();
+        console.log(names.getElement());
+        names.next();
+        console.log(names.getElement());
+        names.end();
+        console.log(names.getElement());
+        names.prev();
+        console.log(names.getElement());
+        names.moveTo(2);
+        console.log(names.getElement());
+        console.log(names.currPos());
+        */
+        for(names.front(); names.hasNext(); names.next()) {
+            console.log(names.getElement());
+        }
+        console.log(names.getElement());
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

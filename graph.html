@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Graph</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="Graph.js"></script>
+    <script src="Dictionary.js"></script>
+    <script src="Queue.js"></script>
+    <script src="Stack.js"></script>
+    <script>
+        var graph = new Graph();
+        /*graph.addEdge(0,1);
+        graph.addEdge(0,2);
+        graph.addEdge(1,3);
+        graph.addEdge(2,4);
+        graph.addEdge(2,3);
+        graph.addEdge(3,5);
+        graph.addEdge(5,4);
+        graph.addEdge(4,3);
+        graph.addEdge(2,5);
+        graph.addEdge(1,5);*/
+        graph.addEdge('A', 'C', 1);
+        graph.addEdge('A', 'D', 4);
+        graph.addEdge('B', 'D', 2);
+        graph.addEdge('B', 'E', 5);
+        graph.addEdge('C', 'F', 1);
+        graph.addEdge('F', 'E', 6);
+        graph.addEdge('F', 'B', 10);
+        graph.addEdge('D', 'E', 2);
+        console.log(graph.toString());
+        /*console.log(graph.bfs(0, function(currentNode) {
+            console.log("Node :: " + currentNode);
+        }));*/
+        //graph.shortestPath(0, 3);
+
+        graph.topologicalSort(function(node) {
+            //console.log(node);
+        });
+
+        graph.dijkstra('A');
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

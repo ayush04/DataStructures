@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<script src='./matrix.js'></script>
+		<script>
+			var matrix = new Matrix(2, 4);
+			matrix.initialize([1,2,3,4,5,6,7,8]);
+			//console.log(matrix.getMatrix());
+			//console.log(matrix.transpose());
+
+			var matrix1 = new Matrix(4, 3);
+			matrix1.initialize([1,2,3,4,5,6,7,8,9,10,11,12]);
+			var matrix3 = new Matrix(3, 2);
+			matrix3.initialize([1,2,3,4,5,6]);
+
+			//console.log(matrix.multiply(matrix1).multiply(matrix3).getMatrix());
+
+			var matrix2 = new Matrix(2, 4);
+			matrix2.initialize([1,2,3,4,5,6,7,8]);
+			console.log(matrix.add(matrix2).getMatrix());
+
+			var matrix_random = new Matrix(3, 3);
+			matrix_random.random();
+			console.log(matrix_random.getMatrix());
+
+			var matrix_zeros = new Matrix(4, 3);
+			matrix_zeros.zeros();
+			console.log(matrix_zeros.getMatrix());
+		</script>
+	</head>
+</html>

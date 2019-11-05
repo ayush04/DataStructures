@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function readTextFile(file) {
+            var request = new XMLHttpRequest();
+            request.open('GET', file, false);
+            request.onreadystatechange = function() {
+                if(request.readyState === 4) {
+                    if(request.status === 200 || request.status === 0) {
+                        processResponse(request.responseText);
+                    }
+                }
+            };
+        };
+
+        function processResponse(content) {
+            console.log(content);
+        }
+
+        readTextFile('movies.txt');
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

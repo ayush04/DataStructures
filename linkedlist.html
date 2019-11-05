@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Linked List</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="Node.js"></script>
+    <script src="LinkedList.js"></script>
+    <script src="DLinkedList.js"></script>
+    <script>
+        /*var llist = new LinkedList();
+        llist.insert(1);
+        llist.insert(2);
+        console.log(llist.display());
+        llist.insert(4);
+        llist.insertAfter(3, 2);
+        console.log(llist.display());
+        llist.remove(2);
+        console.log(llist.display());*/
+
+        var dll = new DLinkedList();
+        dll.insert("A");
+        dll.insert("B");
+        console.log(dll.display());
+        dll.insert("D");
+        dll.insertAfter("C", "B");
+        console.log(dll.display());
+        dll.remove("C");
+        console.log(dll.display());
+        console.log(dll.displayReverse());
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
